@@ -1,0 +1,14 @@
+"use strict";
+exports.__esModule = true;
+var book_1 = require("./book");
+var bookmanger_1 = require("./bookmanger");
+var book1 = new book_1.Book('1', 'java');
+var book2 = new book_1.Book('2', 'js');
+var book3 = new book_1.Book('3', 'ts');
+var manager = new bookmanger_1.Books();
+manager.add(book1);
+manager.add(book2);
+manager.add(book3);
+console.log(manager.getList());
+manager["delete"]('1');
+console.log(manager.getList());

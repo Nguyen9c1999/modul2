@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var staff_1 = require("./staff");
+var engeneers_1 = require("./engeneers");
+var worker_1 = require("./worker");
+var manager_1 = require("./manager");
+var staff = new staff_1.Staff('nguyen', 23, 0, 'Ha Noi', 'ke toan');
+var engineer = new engeneers_1.Engineer('bong', 23, 1, 'ha noi', 'xay dung');
+var work = new worker_1.Worker('mai', 18, 1, 'ha noi', 5);
+var listManger = new manager_1.Manager();
+listManger.add(staff);
+listManger.add(engineer);
+listManger.add(work);
+listManger.display();
+listManger.find('nguyen');
